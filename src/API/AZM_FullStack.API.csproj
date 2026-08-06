@@ -11,4 +11,25 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Modules\Catalog\Catalog.Domain\MoviePlatform.Modules.Catalog.Domain.csproj" />
+    <ProjectReference Include="..\Modules\Catalog\Catalog.Application\MoviePlatform.Modules.Catalog.Application.csproj" />
+    <ProjectReference Include="..\Modules\Catalog\Catalog.Infrastructure\MoviePlatform.Modules.Catalog.Infrastructure.csproj" />
+    <ProjectReference Include="..\Modules\Catalog\Catalog.Contracts\MoviePlatform.Modules.Catalog.Contracts.csproj" />
+    <ProjectReference Include="..\Modules\Identity\Identity.Domain\MoviePlatform.Modules.Identity.Domain.csproj" />
+    <ProjectReference Include="..\Modules\Identity\Identity.Application\MoviePlatform.Modules.Identity.Application.csproj" />
+    <ProjectReference Include="..\Modules\Identity\Identity.Infrastructure\MoviePlatform.Modules.Identity.Infrastructure.csproj" />
+    <ProjectReference Include="..\Modules\Identity\Identity.Contracts\MoviePlatform.Modules.Identity.Contracts.csproj" />
+    <ProjectReference Include="..\Modules\Reviews\Reviews.Domain\MoviePlatform.Modules.Reviews.Domain.csproj" />
+    <ProjectReference Include="..\Modules\Reviews\Reviews.Application\MoviePlatform.Modules.Reviews.Application.csproj" />
+    <ProjectReference Include="..\Modules\Reviews\Reviews.Infrastructure\MoviePlatform.Modules.Reviews.Infrastructure.csproj" />
+    <ProjectReference Include="..\Modules\Reviews\Reviews.Contracts\MoviePlatform.Modules.Reviews.Contracts.csproj" />
+    <ProjectReference Include="..\Modules\Watchlist\Watchlist.Domain\MoviePlatform.Modules.Watchlist.Domain.csproj" />
+    <ProjectReference Include="..\Modules\Watchlist\Watchlist.Application\MoviePlatform.Modules.Watchlist.Application.csproj" />
+    <ProjectReference Include="..\Modules\Watchlist\Watchlist.Infrastructure\MoviePlatform.Modules.Watchlist.Infrastructure.csproj" />
+    <ProjectReference Include="..\Modules\Watchlist\Watchlist.Contracts\MoviePlatform.Modules.Watchlist.Contracts.csproj" />
+    <ProjectReference Include="..\Shared\Shared.Kernel\MoviePlatform.Shared.Kernel.csproj" />
+    <ProjectReference Include="..\Shared\Shared.Infrastructure\MoviePlatform.Shared.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
