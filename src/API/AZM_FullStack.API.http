@@ -1,6 +1,0 @@
-@AZM_FullStack.API_HostAddress = http://localhost:5062
-
-GET {{AZM_FullStack.API_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
