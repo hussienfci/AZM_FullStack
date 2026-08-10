@@ -1,0 +1,16 @@
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\bin\Debug\net9.0\MoviePlatform.Shared.Infrastructure.deps.json
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\bin\Debug\net9.0\MoviePlatform.Shared.Infrastructure.dll
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\bin\Debug\net9.0\MoviePlatform.Shared.Infrastructure.pdb
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\bin\Debug\net9.0\MoviePlatform.Shared.Kernel.dll
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\bin\Debug\net9.0\MoviePlatform.Shared.Kernel.pdb
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\obj\Debug\net9.0\MoviePlatform.Shared.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\obj\Debug\net9.0\MoviePlatform.Shared.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\obj\Debug\net9.0\MoviePlatform.Shared.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\obj\Debug\net9.0\MoviePlatform.Shared.Infrastructure.AssemblyInfo.cs
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\obj\Debug\net9.0\MoviePlatform.Shared.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\obj\Debug\net9.0\MoviePlatform.Shared.Infrastructure.sourcelink.json
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\obj\Debug\net9.0\MoviePla.F655DF75.Up2Date
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\obj\Debug\net9.0\MoviePlatform.Shared.Infrastructure.dll
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\obj\Debug\net9.0\refint\MoviePlatform.Shared.Infrastructure.dll
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\obj\Debug\net9.0\MoviePlatform.Shared.Infrastructure.pdb
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Infrastructure\obj\Debug\net9.0\ref\MoviePlatform.Shared.Infrastructure.dll

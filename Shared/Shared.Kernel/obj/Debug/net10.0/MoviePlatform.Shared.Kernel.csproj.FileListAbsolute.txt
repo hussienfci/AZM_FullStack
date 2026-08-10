@@ -1,0 +1,13 @@
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\bin\Debug\net10.0\MoviePlatform.Shared.Kernel.deps.json
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\bin\Debug\net10.0\MoviePlatform.Shared.Kernel.dll
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\bin\Debug\net10.0\MoviePlatform.Shared.Kernel.pdb
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\obj\Debug\net10.0\MoviePlatform.Shared.Kernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\obj\Debug\net10.0\MoviePlatform.Shared.Kernel.AssemblyInfoInputs.cache
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\obj\Debug\net10.0\MoviePlatform.Shared.Kernel.AssemblyInfo.cs
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\obj\Debug\net10.0\MoviePlatform.Shared.Kernel.csproj.CoreCompileInputs.cache
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\obj\Debug\net10.0\MoviePlatform.Shared.Kernel.sourcelink.json
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\obj\Debug\net10.0\MoviePlatform.Shared.Kernel.dll
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\obj\Debug\net10.0\refint\MoviePlatform.Shared.Kernel.dll
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\obj\Debug\net10.0\MoviePlatform.Shared.Kernel.pdb
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\obj\Debug\net10.0\ref\MoviePlatform.Shared.Kernel.dll
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\src\MoviePlatform_Backend\Shared\Shared.Kernel\obj\Debug\net10.0\MoviePlatform.Shared.Kernel.csproj.AssemblyReference.cache
