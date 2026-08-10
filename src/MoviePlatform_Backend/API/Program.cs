@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using MoviePlatform.Modules.Catalog.Application;
 using MoviePlatform.Modules.Catalog.Infrastructure;
 using MoviePlatform.Modules.Catalog.Infrastructure.Persistence;

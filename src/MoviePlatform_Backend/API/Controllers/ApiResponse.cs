@@ -12,7 +12,7 @@ public class ApiResponse<T>
 
 public class ApiResponse
 {
-    public bool Success { get; set; }
+    public bool IsSuccess { get; set; }
     public object? Data { get; set; }
     public List<string> Errors { get; set; } = new();
 
@@ -23,17 +23,17 @@ public class ApiResponse
 
     public static ApiResponse Success()
     {
-        return new ApiResponse { Success = true };
+        return new ApiResponse { IsSuccess = true };
     }
 
     public static ApiResponse Failure(List<string> errors)
     {
-        return new ApiResponse { Success = false, Errors = errors };
+        return new ApiResponse { IsSuccess = false, Errors = errors };
     }
 
     public static ApiResponse Failure(string error)
     {
-        return new ApiResponse { Success = false, Errors = new List<string> { error } };
+        return new ApiResponse { IsSuccess = false, Errors = new List<string> { error } };
     }
 }
 
