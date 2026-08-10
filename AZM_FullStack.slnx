@@ -2,62 +2,26 @@
   <Folder Name="/src/" />
   <Folder Name="/src/Modules/" />
   <Folder Name="/src/Modules/Catalog/" />
-  <Folder Name="/src/Modules/Catalog/Catalog.Application/">
-    <Project Path="src/Modules/Catalog/Catalog.Application/MoviePlatform.Modules.Catalog.Application.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Catalog/Catalog.Contracts/">
-    <Project Path="src/Modules/Catalog/Catalog.Contracts/MoviePlatform.Modules.Catalog.Contracts.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Catalog/Catalog.Domain/">
-    <Project Path="src/Modules/Catalog/Catalog.Domain/MoviePlatform.Modules.Catalog.Domain.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Catalog/Catalog.Infrastructure/">
-    <Project Path="src/Modules/Catalog/Catalog.Infrastructure/MoviePlatform.Modules.Catalog.Infrastructure.csproj" />
-  </Folder>
+  <Folder Name="/src/Modules/Catalog/Catalog.Application/" />
+  <Folder Name="/src/Modules/Catalog/Catalog.Contracts/" />
+  <Folder Name="/src/Modules/Catalog/Catalog.Domain/" />
+  <Folder Name="/src/Modules/Catalog/Catalog.Infrastructure/" />
   <Folder Name="/src/Modules/Identity/" />
-  <Folder Name="/src/Modules/Identity/Identity.Application/">
-    <Project Path="src/Modules/Identity/Identity.Application/MoviePlatform.Modules.Identity.Application.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Identity/Identity.Contracts/">
-    <Project Path="src/Modules/Identity/Identity.Contracts/MoviePlatform.Modules.Identity.Contracts.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Identity/Identity.Domain/">
-    <Project Path="src/Modules/Identity/Identity.Domain/MoviePlatform.Modules.Identity.Domain.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Identity/Identity.Infrastructure/">
-    <Project Path="src/Modules/Identity/Identity.Infrastructure/MoviePlatform.Modules.Identity.Infrastructure.csproj" />
-  </Folder>
+  <Folder Name="/src/Modules/Identity/Identity.Application/" />
+  <Folder Name="/src/Modules/Identity/Identity.Contracts/" />
+  <Folder Name="/src/Modules/Identity/Identity.Domain/" />
+  <Folder Name="/src/Modules/Identity/Identity.Infrastructure/" />
   <Folder Name="/src/Modules/Reviews/" />
-  <Folder Name="/src/Modules/Reviews/Reviews.Application/">
-    <Project Path="src/Modules/Reviews/Reviews.Application/MoviePlatform.Modules.Reviews.Application.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Reviews/Reviews.Contracts/">
-    <Project Path="src/Modules/Reviews/Reviews.Contracts/MoviePlatform.Modules.Reviews.Contracts.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Reviews/Reviews.Domain/">
-    <Project Path="src/Modules/Reviews/Reviews.Domain/MoviePlatform.Modules.Reviews.Domain.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Reviews/Reviews.Infrastructure/">
-    <Project Path="src/Modules/Reviews/Reviews.Infrastructure/MoviePlatform.Modules.Reviews.Infrastructure.csproj" />
-  </Folder>
+  <Folder Name="/src/Modules/Reviews/Reviews.Application/" />
+  <Folder Name="/src/Modules/Reviews/Reviews.Contracts/" />
+  <Folder Name="/src/Modules/Reviews/Reviews.Domain/" />
+  <Folder Name="/src/Modules/Reviews/Reviews.Infrastructure/" />
   <Folder Name="/src/Modules/Watchlist/" />
-  <Folder Name="/src/Modules/Watchlist/Watchlist.Application/">
-    <Project Path="src/Modules/Watchlist/Watchlist.Application/MoviePlatform.Modules.Watchlist.Application.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Watchlist/Watchlist.Contracts/">
-    <Project Path="src/Modules/Watchlist/Watchlist.Contracts/MoviePlatform.Modules.Watchlist.Contracts.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Watchlist/Watchlist.Domain/">
-    <Project Path="src/Modules/Watchlist/Watchlist.Domain/MoviePlatform.Modules.Watchlist.Domain.csproj" />
-  </Folder>
-  <Folder Name="/src/Modules/Watchlist/Watchlist.Infrastructure/">
-    <Project Path="src/Modules/Watchlist/Watchlist.Infrastructure/MoviePlatform.Modules.Watchlist.Infrastructure.csproj" />
-  </Folder>
+  <Folder Name="/src/Modules/Watchlist/Watchlist.Application/" />
+  <Folder Name="/src/Modules/Watchlist/Watchlist.Contracts/" />
+  <Folder Name="/src/Modules/Watchlist/Watchlist.Domain/" />
+  <Folder Name="/src/Modules/Watchlist/Watchlist.Infrastructure/" />
   <Folder Name="/src/Shared/" />
-  <Folder Name="/src/Shared/Shared.Infrastructure/">
-    <Project Path="src/Shared/Shared.Infrastructure/MoviePlatform.Shared.Infrastructure.csproj" />
-  </Folder>
-  <Folder Name="/src/Shared/Shared.Kernel/">
-    <Project Path="src/Shared/Shared.Kernel/MoviePlatform.Shared.Kernel.csproj" />
-  </Folder>
+  <Folder Name="/src/Shared/Shared.Infrastructure/" />
+  <Folder Name="/src/Shared/Shared.Kernel/" />
 </Solution>
