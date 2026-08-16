@@ -64,5 +64,27 @@ public class MappingProfile : Profile
     CreateMap<UpdateGenreDto, Genre>()
         .ForMember(dest => dest.Id, opt => opt.Ignore())
         .ForMember(dest => dest.CreatedAt, opt => opt.Ignore());
+
+
+        // ── Watchlists ──
+    CreateMap<Watchlist, WatchlistDto>()
+        .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => $"{src.User.FirstName} {src.User.LastName}"))
+        .ForMember(dest => dest.MovieTitle, opt => opt.MapFrom(src => src.Movie.Title))
+        .ForMember(dest => dest.MoviePosterUrl, opt => opt.MapFrom(src => src.Movie.PosterUrl));
+
+    CreateMap<CreateWatchlistDto, Watchlist>()
+        .ForMember(dest => dest.Id, opt => opt.Ignore())
+        .ForMember(dest => dest.CreatedAt, opt => opt.Ignore())
+        .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+        .ForMember(dest => dest.IsWatched, opt => opt.Ignore())
+        .ForMember(dest => dest.WatchedAt, opt => opt.Ignore())
+        .ForMember(dest => dest.IsActive, opt => opt.Ignore());
+
+    CreateMap<UpdateWatchlistDto, Watchlist>()
+        .ForMember(dest => dest.Id, opt => opt.Ignore())
+        .ForMember(dest => dest.UserId, opt => opt.Ignore())
+        .ForMember(dest => dest.MovieId, opt => opt.Ignore())
+        .ForMember(dest => dest.CreatedAt, opt => opt.Ignore());
+
     }
 }

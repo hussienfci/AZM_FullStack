@@ -11,6 +11,7 @@ public class AppDbContext : DbContext
     public DbSet<Movie> Movies { get; set; } = null!;
     public DbSet<Review> Reviews { get; set; } = null!;
     public DbSet<Genre> Genres { get; set; } = null!;
+    public DbSet<Watchlist> Watchlists { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -91,6 +92,34 @@ public class AppDbContext : DbContext
             entity.Property(g => g.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
             entity.ToTable("Genres");
         });
+        
+
+        // ── Watchlists ──
+        modelBuilder.Entity<Watchlist>(entity =>
+        {
+            entity.HasKey(w => w.Id);
+            entity.Property(w => w.Id).ValueGeneratedOnAdd();
+            entity.Property(w => w.IsWatched).HasDefaultValue(false);
+            entity.Property(w => w.IsActive).HasDefaultValue(true);
+            entity.Property(w => w.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
+
+            entity.HasOne(w => w.User)
+                .WithMany()
+                .HasForeignKey(w => w.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(w => w.Movie)
+                .WithMany()
+                .HasForeignKey(w => w.MovieId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasIndex(w => w.UserId).HasDatabaseName("IX_Watchlists_UserId");
+            entity.HasIndex(w => w.MovieId).HasDatabaseName("IX_Watchlists_MovieId");
+            entity.HasIndex(w => new { w.UserId, w.MovieId }).IsUnique().HasDatabaseName("IX_Watchlists_UserId_MovieId");
+
+            entity.ToTable("Watchlists");
+        });
+        
 
         base.OnModelCreating(modelBuilder);
     }

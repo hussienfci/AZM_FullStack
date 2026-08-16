@@ -33,7 +33,8 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
-builder.Services.AddScoped<IGenreService, GenreService>();   // ← ADD THIS
+builder.Services.AddScoped<IGenreService, GenreService>();   
+builder.Services.AddScoped<IWatchlistService, WatchlistService>();
 
 // ── CORS ──
 builder.Services.AddCors(options =>
