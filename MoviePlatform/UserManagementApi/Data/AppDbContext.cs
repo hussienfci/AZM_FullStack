@@ -10,6 +10,7 @@ public class AppDbContext : DbContext
     public DbSet<User> Users { get; set; } = null!;
     public DbSet<Movie> Movies { get; set; } = null!;
     public DbSet<Review> Reviews { get; set; } = null!;
+    public DbSet<Genre> Genres { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -75,6 +76,20 @@ public class AppDbContext : DbContext
             entity.HasIndex(r => new { r.UserId, r.MovieId }).IsUnique().HasDatabaseName("IX_Reviews_UserId_MovieId");
 
             entity.ToTable("Reviews");
+        });
+
+
+        // ── Genres ──
+        modelBuilder.Entity<Genre>(entity =>
+        {
+            entity.HasKey(g => g.Id);
+            entity.Property(g => g.Id).ValueGeneratedOnAdd();
+            entity.Property(g => g.Name).IsRequired().HasMaxLength(100);
+            entity.HasIndex(g => g.Name).IsUnique();
+            entity.Property(g => g.Description).HasMaxLength(500);
+            entity.Property(g => g.IsActive).HasDefaultValue(true);
+            entity.Property(g => g.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
+            entity.ToTable("Genres");
         });
 
         base.OnModelCreating(modelBuilder);

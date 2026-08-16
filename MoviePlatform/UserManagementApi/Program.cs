@@ -6,26 +6,36 @@ using UserManagementApi.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services
+// ── Controllers & API ──
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new() { Title = "User Management API", Version = "v1" });
+    c.SwaggerDoc("v1", new() { Title = "Movie Platform API", Version = "v1" });
 });
 
-// Database
+// ── Database ──
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-    // For PostgreSQL: options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        sqlOptions =>
+        {
+            sqlOptions.EnableRetryOnFailure(
+                maxRetryCount: 5,
+                maxRetryDelay: TimeSpan.FromSeconds(30),
+                errorNumbersToAdd: null);
+        }));
 
-// AutoMapper
-// This line works with AutoMapper 13.0.1 (built-in DI)
+// ── AutoMapper ──
 builder.Services.AddAutoMapper(typeof(MappingProfile));
-// Services
-builder.Services.AddScoped<IUserService, UserService>();
 
-// CORS
+// ── Services (ALL of them) ──
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IMovieService, MovieService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IGenreService, GenreService>();   // ← ADD THIS
+
+// ── CORS ──
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -38,7 +48,14 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Middleware
+// ── Auto-migrate database on startup  
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.Migrate();
+}
+
+// ── Middleware ──
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

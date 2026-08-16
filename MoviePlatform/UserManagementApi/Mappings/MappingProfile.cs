@@ -51,5 +51,18 @@ public class MappingProfile : Profile
             .ForMember(dest => dest.UserId, opt => opt.Ignore())
             .ForMember(dest => dest.MovieId, opt => opt.Ignore())
             .ForMember(dest => dest.CreatedAt, opt => opt.Ignore());
+    
+        // ── Genres ──
+    CreateMap<Genre, GenreDto>();
+
+    CreateMap<CreateGenreDto, Genre>()
+        .ForMember(dest => dest.Id, opt => opt.Ignore())
+        .ForMember(dest => dest.CreatedAt, opt => opt.Ignore())
+        .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+        .ForMember(dest => dest.IsActive, opt => opt.Ignore());
+
+    CreateMap<UpdateGenreDto, Genre>()
+        .ForMember(dest => dest.Id, opt => opt.Ignore())
+        .ForMember(dest => dest.CreatedAt, opt => opt.Ignore());
     }
 }
