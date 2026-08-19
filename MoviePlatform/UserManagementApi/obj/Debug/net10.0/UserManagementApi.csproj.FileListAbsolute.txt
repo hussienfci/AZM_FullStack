@@ -157,3 +157,4 @@ C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\MoviePlatform\UserManagementApi\ob
 C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\MoviePlatform\UserManagementApi\obj\Debug\net10.0\UserManagementApi.pdb
 C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\MoviePlatform\UserManagementApi\obj\Debug\net10.0\UserManagementApi.genruntimeconfig.cache
 C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\MoviePlatform\UserManagementApi\obj\Debug\net10.0\ref\UserManagementApi.dll
+C:\Users\hussi\OneDrive\Desktop\AZM_FullStack\MoviePlatform\UserManagementApi\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
