@@ -117,7 +117,13 @@ public class ReviewsController : ControllerBase
     }
 
     /// <summary>
-    /// Toggle review active status
+    /// 
+    /// Welcome to AZM SQUAD
+    /// 
+    /// Welcome to squad - kit as SDD 
+    /// Welcome to Squad-tool as QA and testing tool 
+    /// Welcome to our projects
+    /// 
     /// </summary>
     [HttpPatch("{id:int}/toggle-status")]
     [ProducesResponseType(typeof(ReviewResponseDto), StatusCodes.Status200OK)]
@@ -126,6 +132,8 @@ public class ReviewsController : ControllerBase
     {
         var response = await _reviewService.ToggleActiveStatusAsync(id);
         if (!response.Success) return NotFound(response);
-        return Ok(response);
+        return Ok(response); 
+
     }
+    
 }
