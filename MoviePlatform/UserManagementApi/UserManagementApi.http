@@ -1,6 +1,24 @@
 @UserManagementApi_HostAddress = http://localhost:5247
 
-GET {{UserManagementApi_HostAddress}}/weatherforecast/
+### 1) Login and copy the "token" value from the response
+POST {{UserManagementApi_HostAddress}}/api/users/login
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "password": "Password123!"
+}
+
+### 2) Call a protected endpoint with the token
+@token = paste-token-here
+
+GET {{UserManagementApi_HostAddress}}/api/users/me
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+GET {{UserManagementApi_HostAddress}}/api/users/1
+Authorization: Bearer {{token}}
 Accept: application/json
 
 ###
