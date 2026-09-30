@@ -1,24 +1,23 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using UserManagementApi.Data;
 using UserManagementApi.Mappings;
 using UserManagementApi.Services;
 using UserManagementApi.Services.Interfaces;
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
 // ── Controllers & API ──
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+
+// ── Swagger with JWT ──
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new() { Title = "Movie Platform API", Version = "v1" });
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Movie Platform API", Version = "v3" });
 
- // Add JWT Authentication to Swagger
-    // Http/bearer scheme: Swagger adds the "Bearer " prefix itself, so paste only the raw token
     c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -43,7 +42,6 @@ builder.Services.AddSwaggerGen(c =>
             Array.Empty<string>()
         }
     });
-
 });
 
 // ── Database ──
@@ -58,8 +56,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
                 errorNumbersToAdd: null);
         }));
 
-
-
 // ── JWT Authentication ──
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 var secretKey = jwtSettings["SecretKey"] ?? throw new InvalidOperationException("JWT SecretKey is not configured");
@@ -71,7 +67,6 @@ builder.Services.AddAuthentication(options =>
 })
 .AddJwtBearer(options =>
 {
-    // Keep claim names exactly as written in the token (email, given_name, userId, ...)
     options.MapInboundClaims = false;
 
     options.TokenValidationParameters = new TokenValidationParameters
@@ -88,7 +83,6 @@ builder.Services.AddAuthentication(options =>
         NameClaimType = "email"
     };
 
-    // Log why a token was rejected, so a 401 is no longer a mystery
     options.Events = new JwtBearerEvents
     {
         OnAuthenticationFailed = context =>
@@ -112,15 +106,16 @@ builder.Services.AddAuthentication(options =>
 
 // ── Authorization ──
 builder.Services.AddAuthorization();
-// ── AutoMapper ──
-builder.Services.AddAutoMapper(typeof(MappingProfile));
 
-// ── Services (ALL of them) ──
+// ── AutoMapper ──
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
+// ── Services ──
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
-builder.Services.AddScoped<IGenreService, GenreService>();   
+builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IWatchlistService, WatchlistService>();
 
 // ── CORS ──
@@ -136,7 +131,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// ── Auto-migrate database on startup  
+// ── Auto-migrate database ──
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -152,7 +147,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
-app.UseAuthentication() ; 
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
