@@ -18,14 +18,15 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new() { Title = "Movie Platform API", Version = "v1" });
 
  // Add JWT Authentication to Swagger
+    // Http/bearer scheme: Swagger adds the "Bearer " prefix itself, so paste only the raw token
     c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
     {
         Name = "Authorization",
-        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
-        Scheme = "Bearer",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+        Scheme = "bearer",
         BearerFormat = "JWT",
         In = Microsoft.OpenApi.Models.ParameterLocation.Header,
-        Description = "Enter 'Bearer' [space] and your token. Example: \"Bearer eyJhbG...\""
+        Description = "Paste only the JWT token (without the 'Bearer ' prefix)."
     });
 
     c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
@@ -70,6 +71,9 @@ builder.Services.AddAuthentication(options =>
 })
 .AddJwtBearer(options =>
 {
+    // Keep claim names exactly as written in the token (email, given_name, userId, ...)
+    options.MapInboundClaims = false;
+
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
@@ -79,7 +83,30 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = jwtSettings["Issuer"],
         ValidAudience = jwtSettings["Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
-        ClockSkew = TimeSpan.Zero
+        ClockSkew = TimeSpan.Zero,
+        RoleClaimType = System.Security.Claims.ClaimTypes.Role,
+        NameClaimType = "email"
+    };
+
+    // Log why a token was rejected, so a 401 is no longer a mystery
+    options.Events = new JwtBearerEvents
+    {
+        OnAuthenticationFailed = context =>
+        {
+            var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger<Program>>();
+            logger.LogWarning(context.Exception, "JWT authentication failed: {Message}", context.Exception.Message);
+            return Task.CompletedTask;
+        },
+        OnChallenge = context =>
+        {
+            var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger<Program>>();
+            logger.LogWarning("401 challenge for {Path}. Authorization header present: {HasHeader}. Error: {Error} {Description}",
+                context.Request.Path,
+                context.Request.Headers.ContainsKey("Authorization"),
+                context.Error,
+                context.ErrorDescription);
+            return Task.CompletedTask;
+        }
     };
 });
 
