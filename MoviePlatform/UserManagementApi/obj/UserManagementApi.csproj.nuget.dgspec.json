@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi\\UserManagementApi.csproj": {}
+    "E:\\AZM_FullStack\\AZM_FullStack\\MoviePlatform\\UserManagementApi\\UserManagementApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi\\UserManagementApi.csproj": {
+    "E:\\AZM_FullStack\\AZM_FullStack\\MoviePlatform\\UserManagementApi\\UserManagementApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi\\UserManagementApi.csproj",
+        "projectUniqueName": "E:\\AZM_FullStack\\AZM_FullStack\\MoviePlatform\\UserManagementApi\\UserManagementApi.csproj",
         "projectName": "UserManagementApi",
-        "projectPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi\\UserManagementApi.csproj",
-        "packagesPath": "C:\\Users\\hussi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi\\obj\\",
+        "projectPath": "E:\\AZM_FullStack\\AZM_FullStack\\MoviePlatform\\UserManagementApi\\UserManagementApi.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "E:\\AZM_FullStack\\AZM_FullStack\\MoviePlatform\\UserManagementApi\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "CentralPackageTransitivePinningEnabled": true,
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hussi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -89,7 +89,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.9.0, )",
+              "version": "[10.2.3, )",
               "versionCentrallyManaged": true
             }
           },
@@ -100,7 +100,7 @@
             "Microsoft.EntityFrameworkCore.SqlServer": "10.0.12",
             "Microsoft.EntityFrameworkCore.Tools": "10.0.12",
             "Microsoft.OpenApi": "2.7.5",
-            "Swashbuckle.AspNetCore": "6.9.0"
+            "Swashbuckle.AspNetCore": "10.2.3"
           },
           "imports": [
             "net461",
@@ -121,7 +121,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.111/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
