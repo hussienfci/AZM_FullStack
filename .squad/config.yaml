@@ -14,6 +14,8 @@ planner:
   enabled: true
   provider: anthropic
   mode: auto
+  auth:
+    anthropic: subscription
   budget:
     maxFileReads: 25
     maxContextBytes: 50000
@@ -21,5 +23,24 @@ planner:
   cache:
     enabled: true
   maxOutputTokens: 16384
-  auth:
-    anthropic: api-key
+  stages:
+    scout:
+      enabled: true
+      maxFiles: 12
+      maxOutputTokens: 2048
+  tools:
+    grep: true
+    listDir: true
+    rangedRead: true
+  validation:
+    enabled: true
+    strict: false
+  runtime:
+    anthropic: agent-sdk
+  providerOptions:
+    anthropic:
+      thinking: adaptive
+      effort: medium
+      effortByPhase:
+        scout: minimal
+        draft: medium
