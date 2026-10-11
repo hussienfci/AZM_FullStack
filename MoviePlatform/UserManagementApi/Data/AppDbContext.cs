@@ -45,6 +45,7 @@ public class AppDbContext : DbContext
             entity.Property(m => m.TrailerUrl).HasMaxLength(500);
             entity.Property(m => m.Language).HasMaxLength(50);
             entity.Property(m => m.Country).HasMaxLength(100);
+            entity.Property(m => m.Rating).HasPrecision(18, 2);
             entity.HasIndex(m => m.Title).HasDatabaseName("IX_Movies_Title");
             entity.HasIndex(m => m.Genre).HasDatabaseName("IX_Movies_Genre");
             entity.Property(m => m.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
