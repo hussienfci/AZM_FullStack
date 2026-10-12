@@ -4,4 +4,6 @@ One row per feature folder under `.squad/plans/`. `NN` continues as a global exe
 
 | Feature | Overview | NN range |
 |---------|----------|----------|
-| _add rows per feature_ |
+| auth | [auth/00-overview.md](auth/00-overview.md) | 01 |
+| moviegenres | — | 01 |
+| browse-movies | [browse-movies/00-overview.md](browse-movies/00-overview.md) | 02 |
