@@ -11,7 +11,7 @@ unchanged `MovieDto`.
 
 **Feature:** movie-image-attachment
 **Story:** poster-upload-api
-**Scope:** Backend only (`MoviePlatform/UserManagementApi`) plus a new test project.
+**Scope:** Backend only (`MoviePlatform/backendLayer`) plus a new test project.
 **Depends on:** nothing new. Uses the existing JWT auth (`ClaimTypes.Role` is already mapped in `Program.cs`).
 
 All paths are relative to `MoviePlatform/` unless they say otherwise.
@@ -22,9 +22,9 @@ All paths are relative to `MoviePlatform/` unless they say otherwise.
 
 ### 2.1 Stack
 - .NET 10 (`net10.0`, SDK 10.0.401), ASP.NET Core controllers, EF Core 10 on SQL Server (LocalDB), AutoMapper 16.
-- Central package management: `UserManagementApi/Directory.Packages.props`. **Any new package for the API project needs a `<PackageVersion>` row there.** This story adds **no** packages to the API project.
+- Central package management: `backendLayer/Directory.Packages.props`. **Any new package for the API project needs a `<PackageVersion>` row there.** This story adds **no** packages to the API project.
 - `Program.cs` auto-migrates on start-up and seeds dev data (`Data/DatabaseSeeder.cs`, currently uncommitted; leave it alone).
-- The dev API listens on `http://localhost:5247`. The Angular dev server proxies only `/api/*` to it (`Frontend/movie-auth-app/proxy.conf.json`). **This is why the poster URL must start with `/api/`.**
+- The dev API listens on `http://localhost:5247`. The Angular dev server proxies only `/api/*` to it (`Frontend/frontend layer/proxy.conf.json`). **This is why the poster URL must start with `/api/`.**
 
 ### 2.2 Relevant existing code
 - `Models/Movie.cs`: `[StringLength(500)] public string? PosterUrl`. **There is no schema change and no migration.**
@@ -75,7 +75,7 @@ Error messages (use these exact strings so the tests and frontend can rely on th
 ## 4. Implementation Steps (In Order)
 
 ### Step 1: Options + configuration
-**New file:** `UserManagementApi/Services/Storage/ImageStorageOptions.cs`
+**New file:** `backendLayer/Services/Storage/ImageStorageOptions.cs`
 ```csharp
 namespace UserManagementApi.Services.Storage;
 
@@ -89,14 +89,14 @@ public class ImageStorageOptions
     public long MaxPosterBytes { get; set; } = 5 * 1024 * 1024;
 }
 ```
-**Modify:** `UserManagementApi/appsettings.json`. Add a top-level section:
+**Modify:** `backendLayer/appsettings.json`. Add a top-level section:
 ```json
 "ImageStorage": { "RootPath": "App_Data/uploads", "MaxPosterBytes": 5242880 }
 ```
-**Modify:** the repo-root `.gitignore`. Append the line `MoviePlatform/UserManagementApi/App_Data/` (outside the squad-kit managed block).
+**Modify:** the repo-root `.gitignore`. Append the line `MoviePlatform/backendLayer/App_Data/` (outside the squad-kit managed block).
 
 ### Step 2: Image format detection (pure, unit-testable)
-**New file:** `UserManagementApi/Services/Storage/ImageFormat.cs`
+**New file:** `backendLayer/Services/Storage/ImageFormat.cs`
 ```csharp
 namespace UserManagementApi.Services.Storage;
 
@@ -119,7 +119,7 @@ public static class ImageFormat
 Return `null` for anything else or for fewer bytes than needed.
 
 ### Step 3: Storage abstraction + local implementation
-**New file:** `UserManagementApi/Services/Storage/IImageStorage.cs`
+**New file:** `backendLayer/Services/Storage/IImageStorage.cs`
 ```csharp
 namespace UserManagementApi.Services.Storage;
 
@@ -138,7 +138,7 @@ public interface IImageStorage
     (Stream Content, string ContentType)? OpenPoster(string fileName);
 }
 ```
-**New file:** `UserManagementApi/Services/Storage/LocalImageStorage.cs`
+**New file:** `backendLayer/Services/Storage/LocalImageStorage.cs`
 - Constructor: `(IOptions<ImageStorageOptions> options, IWebHostEnvironment env, ILogger<LocalImageStorage> logger)`. Resolve `_postersDir = Path.GetFullPath(Path.Combine(env.ContentRootPath, options.Value.RootPath, "posters"))`, then `Directory.CreateDirectory(_postersDir)`. When `RootPath` is absolute, `Path.Combine` already returns it unchanged.
 - `public const string PosterUrlPrefix = "/api/media/posters/";`
 - `private static readonly Regex FileNamePattern = new(@"^[0-9a-f]{32}\.(jpg|png|webp)$", RegexOptions.Compiled | RegexOptions.CultureInvariant);`
@@ -149,7 +149,7 @@ public interface IImageStorage
 - Defence in depth: after `Path.Combine(_postersDir, fileName)`, also assert `Path.GetFullPath(p).StartsWith(_postersDir + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase)`. The regex already blocks traversal, but this check stays in place.
 
 ### Step 4: Register services and the request limit
-**Modify:** `UserManagementApi/Program.cs` (it has uncommitted edits; add to it, don't rewrite it)
+**Modify:** `backendLayer/Program.cs` (it has uncommitted edits; add to it, don't rewrite it)
 - `using UserManagementApi.Services.Storage;`
 - Under `// ── Services ──`:
   ```csharp
@@ -159,14 +159,14 @@ public interface IImageStorage
 No middleware changes. Do **not** add `UseStaticFiles` for the uploads folder.
 
 ### Step 5: Service methods
-**Modify:** `UserManagementApi/Services/Interfaces/IMovieService.cs`. Add:
+**Modify:** `backendLayer/Services/Interfaces/IMovieService.cs`. Add:
 ```csharp
 Task<MovieResponseDto> SetPosterAsync(int id, IFormFile? file, CancellationToken ct = default);
 Task<MovieResponseDto> RemovePosterAsync(int id, CancellationToken ct = default);
 ```
 (`IFormFile` needs `using Microsoft.AspNetCore.Http;`.)
 
-**Modify:** `UserManagementApi/Services/MovieService.cs`
+**Modify:** `backendLayer/Services/MovieService.cs`
 - Inject `IImageStorage _imageStorage` and `IOptions<ImageStorageOptions> options` (store `_maxPosterBytes = options.Value.MaxPosterBytes`).
 - `SetPosterAsync`. **The order matters for AC 3: nothing changes unless everything is valid.**
   1. `file is null || file.Length == 0` → `{ Success=false, Message="No file was uploaded" }`
@@ -191,7 +191,7 @@ Task<MovieResponseDto> RemovePosterAsync(int id, CancellationToken ct = default)
   - Normalise whitespace-only `PosterUrl` to `null` in Create and Update.
 
 ### Step 6: Controller endpoints
-**Modify:** `UserManagementApi/Controllers/MoviesController.cs`. Add `using Microsoft.AspNetCore.Authorization;` and append:
+**Modify:** `backendLayer/Controllers/MoviesController.cs`. Add `using Microsoft.AspNetCore.Authorization;` and append:
 ```csharp
 private const long PosterRequestLimit = 6 * 1024 * 1024; // 5 MB file + multipart overhead
 
@@ -226,7 +226,7 @@ Notes:
 - `[ApiController]` returns an automatic 400 `ProblemDetails` when model binding fails. That is acceptable. A missing `file` binds as `null` because it is nullable, so it reaches the service's "No file was uploaded" message.
 - The service also catches a generic failure with the message `"An error occurred while uploading poster"`, which ends in `BadRequest`. That matches how the existing `Update` behaves.
 
-**New file:** `UserManagementApi/Controllers/MediaController.cs`
+**New file:** `backendLayer/Controllers/MediaController.cs`
 ```csharp
 [ApiController]
 [Route("api/media")]
@@ -258,11 +258,11 @@ There is no test project yet. Create one **next to** the API project, not inside
 From `MoviePlatform/`:
 ```bash
 dotnet new xunit -o UserManagementApi.Tests -f net10.0
-dotnet add UserManagementApi.Tests reference UserManagementApi/UserManagementApi.csproj
+dotnet add UserManagementApi.Tests reference backendLayer/UserManagementApi.csproj
 dotnet add UserManagementApi.Tests package Microsoft.EntityFrameworkCore.InMemory --version 10.0.12
 dotnet add UserManagementApi.Tests package Microsoft.AspNetCore.Mvc.Testing --version 10.0.12   # only if FrameworkReference is insufficient; see below
 ```
-- `UserManagementApi/Directory.Packages.props` lives inside the API folder, so it does **not** apply to the test project. Normal `Version=` attributes are fine there.
+- `backendLayer/Directory.Packages.props` lives inside the API folder, so it does **not** apply to the test project. Normal `Version=` attributes are fine there.
 - Add `<FrameworkReference Include="Microsoft.AspNetCore.App" />` to the test csproj so `IFormFile` / `FormFile` are available. Drop the Mvc.Testing package if it isn't needed.
 - If `dotnet build` complains about NuGet restore with central management, add `<ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>` to the test csproj.
 
@@ -295,7 +295,7 @@ If `AppDbContext`'s model uses SQL-Server-only configuration that InMemory rejec
 ### Step 8: Build & test
 From `MoviePlatform/`:
 ```bash
-dotnet build UserManagementApi/UserManagementApi.csproj
+dotnet build backendLayer/UserManagementApi.csproj
 dotnet test UserManagementApi.Tests
 ```
 Both must pass with zero errors. Do **not** run `dotnet ef migrations add`, because the schema does not change.
@@ -314,7 +314,7 @@ You need an Admin JWT. Self-registration creates `User`, so promote your account
 1. `PUT /api/movies/1/poster` with a PNG → 200, and `data.posterUrl` is `/api/media/posters/<guid>.png`.
 2. Open `http://localhost:5247/api/media/posters/<guid>.png` in the browser with no token → the image is shown.
 3. `GET /api/movies/1` → the same `posterUrl`.
-4. Upload a JPEG to the same movie → new URL; the old file is gone from `UserManagementApi/App_Data/uploads/posters`.
+4. Upload a JPEG to the same movie → new URL; the old file is gone from `backendLayer/App_Data/uploads/posters`.
 5. Upload a `.txt` renamed to `.png` → 400 "Unsupported image format…"; `posterUrl` is unchanged.
 6. Upload a file larger than 6 MB → 413; a 5–6 MB file → 400 "File is too large…".
 7. `PUT /api/movies/99999/poster` → 404.
@@ -329,21 +329,21 @@ You need an Admin JWT. Self-registration creates `User`, so promote your account
 ### New files
 | File | Purpose |
 |------|---------|
-| `UserManagementApi/Services/Storage/ImageStorageOptions.cs` | Root path and max size config |
-| `UserManagementApi/Services/Storage/ImageFormat.cs` | Magic-byte detection, extension and content type |
-| `UserManagementApi/Services/Storage/IImageStorage.cs` | Storage abstraction |
-| `UserManagementApi/Services/Storage/LocalImageStorage.cs` | Disk implementation; managed-URL ownership rules |
-| `UserManagementApi/Controllers/MediaController.cs` | Anonymous `GET /api/media/posters/{file}` |
+| `backendLayer/Services/Storage/ImageStorageOptions.cs` | Root path and max size config |
+| `backendLayer/Services/Storage/ImageFormat.cs` | Magic-byte detection, extension and content type |
+| `backendLayer/Services/Storage/IImageStorage.cs` | Storage abstraction |
+| `backendLayer/Services/Storage/LocalImageStorage.cs` | Disk implementation; managed-URL ownership rules |
+| `backendLayer/Controllers/MediaController.cs` | Anonymous `GET /api/media/posters/{file}` |
 | `UserManagementApi.Tests/*` | xUnit project and the three test classes |
 
 ### Modified files
 | File | Changes |
 |------|---------|
-| `UserManagementApi/Program.cs` | Register options and `IImageStorage` |
-| `UserManagementApi/appsettings.json` | `ImageStorage` section |
-| `UserManagementApi/Services/Interfaces/IMovieService.cs` | `SetPosterAsync`, `RemovePosterAsync` |
-| `UserManagementApi/Services/MovieService.cs` | New methods; PosterUrl validation and managed-file cleanup in Create/Update/Delete |
-| `UserManagementApi/Controllers/MoviesController.cs` | `PUT` / `DELETE {id}/poster` (Admin) |
+| `backendLayer/Program.cs` | Register options and `IImageStorage` |
+| `backendLayer/appsettings.json` | `ImageStorage` section |
+| `backendLayer/Services/Interfaces/IMovieService.cs` | `SetPosterAsync`, `RemovePosterAsync` |
+| `backendLayer/Services/MovieService.cs` | New methods; PosterUrl validation and managed-file cleanup in Create/Update/Delete |
+| `backendLayer/Controllers/MoviesController.cs` | `PUT` / `DELETE {id}/poster` (Admin) |
 | `.gitignore` (repo root) | Ignore `App_Data/` |
 
 ### Not touched
@@ -353,7 +353,7 @@ You need an Admin JWT. Self-registration creates `User`, so promote your account
 
 ## 7. Rollback Plan
 1. Revert the modified files (`git checkout -- <file>`), then delete the new files and `UserManagementApi.Tests/`.
-2. Optional data cleanup: `UPDATE Movies SET PosterUrl = NULL WHERE PosterUrl LIKE '/api/media/posters/%'`, then delete `UserManagementApi/App_Data/uploads/`.
+2. Optional data cleanup: `UPDATE Movies SET PosterUrl = NULL WHERE PosterUrl LIKE '/api/media/posters/%'`, then delete `backendLayer/App_Data/uploads/`.
 
 There is no schema change to revert.
 

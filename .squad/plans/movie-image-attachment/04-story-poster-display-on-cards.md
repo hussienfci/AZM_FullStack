@@ -12,10 +12,10 @@ poster URL changes.
 
 **Feature:** movie-image-attachment
 **Story:** poster-display-on-cards
-**Scope:** Frontend only (`MoviePlatform/Frontend/movie-auth-app`). **No backend changes** and no upload UI.
+**Scope:** Frontend only (`MoviePlatform/Frontend/frontend layer`). **No backend changes** and no upload UI.
 **Depends on:** 03 (poster upload API). The spec itself uses mocked HTTP, so it can be written before 03 is merged. The manual check needs 03.
 
-All paths are relative to `MoviePlatform/Frontend/movie-auth-app` unless they say otherwise.
+All paths are relative to `MoviePlatform/Frontend/frontend layer` unless they say otherwise.
 
 ---
 
@@ -103,7 +103,7 @@ Both must pass. Fix strict-template errors in code; don't loosen `tsconfig`.
 1. Upload a poster to a movie through Swagger (story 03 §5.2). Reload `/browse` and the card shows the image.
 2. DevTools → Network: the image request goes to `/api/media/posters/<guid>.png` on the dev server origin, is proxied, and returns 200 with no `Authorization` header needed.
 3. Remove the poster through Swagger and reload. The card shows the title fallback.
-4. Delete the file from `UserManagementApi/App_Data/uploads/posters` while the URL is still set and reload. The card falls back and no broken-image icon appears.
+4. Delete the file from `backendLayer/App_Data/uploads/posters` while the URL is still set and reload. The card falls back and no broken-image icon appears.
 
 ---
 

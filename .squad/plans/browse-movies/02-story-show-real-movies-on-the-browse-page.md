@@ -13,13 +13,12 @@ of movie cards with loading skeletons and an error + Retry state, and a unit tes
 **Scope:** Frontend only. No auth changes.
 
 > **Do not modify or duplicate the backend.** `GET /api/movies` already exists in
-> `MoviePlatform/UserManagementApi` and returns everything this story needs. Do not add, copy or
-> change any controller, service, DTO, migration or other file under `MoviePlatform/UserManagementApi`.
+> `MoviePlatform/backendLayer` and returns everything this story needs. Do not add, copy or
+> change any controller, service, DTO, migration or other file under `MoviePlatform/backendLayer`.
 > The backend files below are listed **for reference only**, so the frontend models match the existing contract.
 **Depends on:** auth story (JWT login + `jwtInterceptor`), already merged.
 
-> **Path correction:** the intake says `MoviePlatform/movie-auth-app`. The app actually lives at
-> **`MoviePlatform/Frontend/movie-auth-app`**. All paths below are relative to that folder
+> **Path correction:** the app lives at **`MoviePlatform/Frontend/frontend layer`**. All paths below are relative to that folder
 > unless they start with `MoviePlatform/`.
 
 ---
@@ -34,11 +33,11 @@ of movie cards with loading skeletons and an error + Retry state, and a unit tes
 - API base: `API_BASE_URL = '/api'` in `src/app/core/config/api.config.ts`; `proxy.conf.json` forwards `/api` to `http://localhost:5247`.
 
 ### 2.2 Backend contract (read-only, do not change)
-`MoviePlatform/UserManagementApi/Controllers/MoviesController.cs`:
+`MoviePlatform/backendLayer/Controllers/MoviesController.cs`:
 ```
 GET /api/movies?page=1&pageSize=20  →  200 MoviesListResponseDto
 ```
-ASP.NET serializes to camelCase JSON. `MoviePlatform/UserManagementApi/Models/DTOs/MovieDto.cs`:
+ASP.NET serializes to camelCase JSON. `MoviePlatform/backendLayer/Models/DTOs/MovieDto.cs`:
 ```csharp
 public class MovieDto {
     int Id; string Title; string? Description; string Genre; int? DurationMinutes;
@@ -238,7 +237,7 @@ Notes:
 - Empty-list state is not in the AC but prevents a blank section; keep it.
 
 ### Step 5: Build & test
-From `MoviePlatform/Frontend/movie-auth-app`:
+From `MoviePlatform/Frontend/frontend layer`:
 ```bash
 npm run build
 npm test -- --watch=false

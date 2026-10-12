@@ -6,11 +6,11 @@
 Show real movies on the Browse page
 
 ## Description
-The Angular app at `MoviePlatform/movie-auth-app` has a protected `/browse` page
+The Angular app at `MoviePlatform/Frontend/frontend layer` has a protected `/browse` page
 (`src/app/features/browse/browse.component.ts`) that currently shows placeholder
 gradient cards. Replace them with real movies from the backend
 `GET /api/movies?page=1&pageSize=20` (MoviesController in
-`MoviePlatform/UserManagementApi`). Requests go through the existing
+`MoviePlatform/backendLayer`). Requests go through the existing
 `jwtInterceptor`, so no auth code changes are needed.
 
 ## Acceptance criteria

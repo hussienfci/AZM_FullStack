@@ -2725,8 +2725,8 @@
     },
     "UserManagementApi/1.0.0": {
       "type": "project",
-      "path": "../UserManagementApi/UserManagementApi.csproj",
-      "msbuildProject": "../UserManagementApi/UserManagementApi.csproj"
+      "path": "../backendLayer/UserManagementApi.csproj",
+      "msbuildProject": "../backendLayer/UserManagementApi.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2772,8 +2772,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi\\UserManagementApi.csproj": {
-              "projectPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi\\UserManagementApi.csproj"
+            "c:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\UserManagementApi.csproj": {
+              "projectPath": "c:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\UserManagementApi.csproj"
             }
           }
         }
