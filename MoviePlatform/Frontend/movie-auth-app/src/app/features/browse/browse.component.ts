@@ -79,7 +79,7 @@ interface MeResponse {
                     [src]="movie.posterUrl"
                     [alt]="movie.title + ' poster'"
                     loading="lazy"
-                    (error)="onPosterError(movie.id)"
+                    (error)="onPosterError(movie.posterUrl)"
                     class="aspect-[2/3] w-full rounded-md bg-neutral-800 object-cover"
                   />
                 } @else {
@@ -115,7 +115,7 @@ export class BrowseComponent implements OnInit {
   protected readonly movieService = inject(MovieService);
 
   protected readonly skeletons = Array.from({ length: 8 }, (_, i) => i);
-  private readonly brokenPosters = signal<ReadonlySet<number>>(new Set());
+  private readonly brokenPosters = signal<ReadonlySet<string>>(new Set());
   protected readonly profile = signal<MeResponse | null>(null);
   protected readonly profileError = signal<string | null>(null);
   protected readonly firstName = computed(
@@ -135,10 +135,12 @@ export class BrowseComponent implements OnInit {
   }
 
   protected hasPoster(movie: Movie): boolean {
-    return !!movie.posterUrl?.trim() && !this.brokenPosters().has(movie.id);
+    const url = movie.posterUrl?.trim();
+    return !!url && !this.brokenPosters().has(url);
   }
 
-  protected onPosterError(id: number): void {
-    this.brokenPosters.update((set) => new Set(set).add(id));
+  protected onPosterError(url: string | null | undefined): void {
+    const key = url?.trim();
+    if (key) this.brokenPosters.update((set) => new Set(set).add(key));
   }
 }
