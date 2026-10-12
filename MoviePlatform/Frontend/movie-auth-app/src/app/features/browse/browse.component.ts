@@ -2,7 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, computed, inject, OnInit, signal } from '@angular/core';
 
 import { API_BASE_URL } from '../../core/config/api.config';
+import { Movie } from '../../core/models/movie.models';
 import { AuthService } from '../../core/services/auth.service';
+import { MovieService } from '../../core/services/movie.service';
 
 interface MeResponse {
   userId: string;
@@ -12,12 +14,7 @@ interface MeResponse {
   role: string;
 }
 
-const ROWS = [
-  { title: 'Trending Now', hues: [350, 20, 200, 260, 140, 40] },
-  { title: 'Top Picks for You', hues: [220, 300, 10, 170, 50, 280] },
-];
-
-/** Protected landing page. Calls GET /api/users/me so you can see the interceptor at work. */
+/** Protected landing page. Calls GET /api/users/me so you can see the interceptor at work, and loads movies from GET /api/movies. */
 @Component({
   selector: 'app-browse',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -53,27 +50,72 @@ const ROWS = [
         </div>
       </section>
 
-      @for (row of rows; track row.title) {
-        <section class="px-6 pb-10 sm:px-12">
-          <h2 class="mb-3 text-lg font-semibold">{{ row.title }}</h2>
-          <div class="flex gap-3 overflow-x-auto pb-2">
-            @for (hue of row.hues; track $index) {
-              <div
-                class="aspect-video w-56 shrink-0 rounded-md transition-transform duration-300 hover:scale-105"
-                [style.background]="'linear-gradient(135deg, hsl(' + hue + ' 70% 35%), hsl(' + (hue + 40) + ' 60% 12%))'"
-              ></div>
+      <section class="px-6 pb-10 sm:px-12" aria-labelledby="latest-heading">
+        <h2 id="latest-heading" class="mb-3 text-lg font-semibold">Latest Movies</h2>
+
+        @if (movieService.loading()) {
+          <div class="flex gap-3 overflow-x-auto pb-2" aria-busy="true" aria-label="Loading movies">
+            @for (i of skeletons; track i) {
+              <div class="w-40 shrink-0 sm:w-44">
+                <div class="aspect-[2/3] animate-pulse rounded-md bg-neutral-800"></div>
+                <div class="mt-2 h-4 w-3/4 animate-pulse rounded bg-neutral-800"></div>
+                <div class="mt-1 h-3 w-1/2 animate-pulse rounded bg-neutral-800"></div>
+              </div>
             }
           </div>
-        </section>
-      }
+        } @else if (movieService.error(); as error) {
+          <div class="flex items-center gap-4 rounded-md bg-black/60 p-4 text-sm ring-1 ring-white/10" role="alert">
+            <p class="text-red-400">{{ error }}</p>
+            <button type="button" class="btn-ghost" (click)="movieService.load()">Retry</button>
+          </div>
+        } @else if (movieService.movies().length === 0) {
+          <p class="text-sm text-neutral-400">No movies available yet.</p>
+        } @else {
+          <div class="flex gap-3 overflow-x-auto pb-2">
+            @for (movie of movieService.movies(); track movie.id) {
+              <article class="w-40 shrink-0 transition-transform duration-300 hover:scale-105 sm:w-44">
+                @if (hasPoster(movie)) {
+                  <img
+                    [src]="movie.posterUrl"
+                    [alt]="movie.title + ' poster'"
+                    loading="lazy"
+                    (error)="onPosterError(movie.id)"
+                    class="aspect-[2/3] w-full rounded-md bg-neutral-800 object-cover"
+                  />
+                } @else {
+                  <div
+                    class="flex aspect-[2/3] w-full items-center justify-center rounded-md bg-neutral-800 p-3 text-center text-sm font-semibold text-neutral-400 ring-1 ring-white/10"
+                  >
+                    {{ movie.title }}
+                  </div>
+                }
+                <h3 class="mt-2 truncate text-sm font-semibold" [title]="movie.title">{{ movie.title }}</h3>
+                <p class="text-xs text-neutral-400">
+                  @if (releaseYear(movie); as year) {
+                    <span>{{ year }}</span>
+                  }
+                  @if (releaseYear(movie) && movie.rating != null) {
+                    <span> · </span>
+                  }
+                  @if (movie.rating != null) {
+                    <span class="text-amber-400">★ {{ movie.rating }}</span>
+                  }
+                </p>
+              </article>
+            }
+          </div>
+        }
+      </section>
     </div>
   `,
 })
 export class BrowseComponent implements OnInit {
   private readonly http = inject(HttpClient);
   protected readonly auth = inject(AuthService);
+  protected readonly movieService = inject(MovieService);
 
-  protected readonly rows = ROWS;
+  protected readonly skeletons = Array.from({ length: 8 }, (_, i) => i);
+  private readonly brokenPosters = signal<ReadonlySet<number>>(new Set());
   protected readonly profile = signal<MeResponse | null>(null);
   protected readonly profileError = signal<string | null>(null);
   protected readonly firstName = computed(
@@ -85,5 +127,18 @@ export class BrowseComponent implements OnInit {
       next: (me) => this.profile.set(me),
       error: () => this.profileError.set('Could not load your profile from the API.'),
     });
+    this.movieService.load();
+  }
+
+  protected releaseYear(movie: Movie): number | null {
+    return movie.releaseDate ? new Date(movie.releaseDate).getFullYear() : null;
+  }
+
+  protected hasPoster(movie: Movie): boolean {
+    return !!movie.posterUrl?.trim() && !this.brokenPosters().has(movie.id);
+  }
+
+  protected onPosterError(id: number): void {
+    this.brokenPosters.update((set) => new Set(set).add(id));
   }
 }
