@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UserManagementApi.Models.DTOs;
 using UserManagementApi.Services.Interfaces;
@@ -137,6 +138,42 @@ public class MoviesController : ControllerBase
     {
         var response = await _movieService.ToggleActiveStatusAsync(id);
         if (!response.Success) return NotFound(response);
+        return Ok(response);
+    }
+
+    private const long PosterRequestLimit = 6 * 1024 * 1024; // 5 MB file + multipart overhead
+
+    /// <summary>
+    /// Upload or replace the movie's poster (JPEG, PNG or WebP, max 5 MB). Admin only.
+    /// </summary>
+    [HttpPut("{id:int}/poster")]
+    [Authorize(Roles = "Admin")]
+    [Consumes("multipart/form-data")]
+    [RequestSizeLimit(PosterRequestLimit)]
+    [RequestFormLimits(MultipartBodyLengthLimit = PosterRequestLimit)]
+    [ProducesResponseType(typeof(MovieResponseDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(MovieResponseDto), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(MovieResponseDto), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<MovieResponseDto>> UploadPoster(int id, IFormFile? file, CancellationToken ct)
+    {
+        var response = await _movieService.SetPosterAsync(id, file, ct);
+        if (!response.Success)
+            return response.Message.Contains("not found") ? NotFound(response) : BadRequest(response);
+        return Ok(response);
+    }
+
+    /// <summary>
+    /// Remove the movie's poster. Admin only.
+    /// </summary>
+    [HttpDelete("{id:int}/poster")]
+    [Authorize(Roles = "Admin")]
+    [ProducesResponseType(typeof(MovieResponseDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(MovieResponseDto), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<MovieResponseDto>> RemovePoster(int id, CancellationToken ct)
+    {
+        var response = await _movieService.RemovePosterAsync(id, ct);
+        if (!response.Success)
+            return response.Message.Contains("not found") ? NotFound(response) : BadRequest(response);
         return Ok(response);
     }
 }

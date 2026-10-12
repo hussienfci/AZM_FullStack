@@ -7,6 +7,7 @@ using UserManagementApi.Data;
 using UserManagementApi.Mappings;
 using UserManagementApi.Services;
 using UserManagementApi.Services.Interfaces;
+using UserManagementApi.Services.Storage;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -102,6 +103,8 @@ builder.Services.AddAuthorization();
 builder.Services.AddAutoMapper(cfg => { }, typeof(MappingProfile).Assembly);
 
 // ── Services ──
+builder.Services.Configure<ImageStorageOptions>(builder.Configuration.GetSection(ImageStorageOptions.SectionName));
+builder.Services.AddSingleton<IImageStorage, LocalImageStorage>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IMovieService, MovieService>();
@@ -127,6 +130,11 @@ using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     dbContext.Database.Migrate();
+
+    if (app.Environment.IsDevelopment())
+    {
+        await DatabaseSeeder.SeedDevelopmentDataAsync(dbContext);
+    }
 }
 
 // ── Middleware ──
