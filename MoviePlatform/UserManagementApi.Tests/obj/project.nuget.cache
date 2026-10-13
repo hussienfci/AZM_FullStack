@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B61nOdtt6oo=",
+  "dgSpecHash": "p9vPLtl562Q=",
   "success": true,
-  "projectFilePath": "c:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi.Tests\\UserManagementApi.Tests.csproj",
+  "projectFilePath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi.Tests\\UserManagementApi.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hussi\\.nuget\\packages\\automapper\\16.2.0\\automapper.16.2.0.nupkg.sha512",
     "C:\\Users\\hussi\\.nuget\\packages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",
