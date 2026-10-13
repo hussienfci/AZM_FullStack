@@ -1,6 +1,14 @@
 # Managed by squad-kit — do not edit this block
 .squad/secrets.yaml
+.claude/.squad/secrets.yaml
 .squad/stories/**/attachments/
+.claude/.squad/stories/**/attachments/
 .squad/.trash/
+.claude/.squad/.trash/
 # End squad-kit block
+
+# Environment secrets
+.env
+.env.local
+.env*.local
 MoviePlatform/backendLayer/App_Data/
