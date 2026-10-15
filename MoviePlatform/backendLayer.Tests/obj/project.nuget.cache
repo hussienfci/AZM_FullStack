@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p9vPLtl562Q=",
+  "dgSpecHash": "QQOzQsfGM2c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi.Tests\\UserManagementApi.Tests.csproj",
+  "projectFilePath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer.Tests\\backendLayer.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hussi\\.nuget\\packages\\automapper\\16.2.0\\automapper.16.2.0.nupkg.sha512",
     "C:\\Users\\hussi\\.nuget\\packages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",
@@ -57,5 +57,30 @@
     "C:\\Users\\hussi\\.nuget\\packages\\xunit.extensibility.execution\\2.9.3\\xunit.extensibility.execution.2.9.3.nupkg.sha512",
     "C:\\Users\\hussi\\.nuget\\packages\\xunit.runner.visualstudio\\3.1.4\\xunit.runner.visualstudio.3.1.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Pkcs' 9.0.11 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-2fmv-rv2c-59x7",
+      "projectPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer.Tests\\backendLayer.Tests.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer.Tests\\backendLayer.Tests.csproj",
+      "libraryId": "System.Security.Cryptography.Pkcs",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Pkcs' 9.0.11 has a known high severity vulnerability, https://github.com/advisories/GHSA-846f-f764-76mx",
+      "projectPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer.Tests\\backendLayer.Tests.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer.Tests\\backendLayer.Tests.csproj",
+      "libraryId": "System.Security.Cryptography.Pkcs",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

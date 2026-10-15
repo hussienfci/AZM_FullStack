@@ -1,20 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi.Tests\\UserManagementApi.Tests.csproj": {}
+    "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer.Tests\\backendLayer.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\UserManagementApi.csproj": {
+    "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer.Tests\\backendLayer.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\UserManagementApi.csproj",
-        "projectName": "UserManagementApi",
-        "projectPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\UserManagementApi.csproj",
+        "projectUniqueName": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer.Tests\\backendLayer.Tests.csproj",
+        "projectName": "backendLayer.Tests",
+        "projectPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer.Tests\\backendLayer.Tests.csproj",
         "packagesPath": "C:\\Users\\hussi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\obj\\",
+        "outputPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer.Tests\\obj\\",
         "projectStyle": "PackageReference",
-        "centralPackageVersionsManagementEnabled": true,
-        "CentralPackageTransitivePinningEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -34,13 +32,14 @@
           "net10.0": {
             "framework": "net10.0",
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\UserManagementApi.csproj": {
+                "projectPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\UserManagementApi.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
-          "noWarn": [
-            "NU1507"
-          ],
           "warnAsError": [
             "NU1605"
           ]
@@ -57,52 +56,26 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
-            "AutoMapper": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[16.2.0, )",
-              "versionCentrallyManaged": true
+              "version": "[10.0.12, )"
             },
-            "BCrypt.Net-Next": {
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[4.2.0, )",
-              "versionCentrallyManaged": true
+              "version": "[17.14.1, )"
             },
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "coverlet.collector": {
               "target": "Package",
-              "version": "[10.0.12, )",
-              "versionCentrallyManaged": true
+              "version": "[6.0.4, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "xunit": {
               "target": "Package",
-              "version": "[10.0.12, )",
-              "versionCentrallyManaged": true
+              "version": "[2.9.3, )"
             },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "xunit.runner.visualstudio": {
               "target": "Package",
-              "version": "[10.0.12, )",
-              "versionCentrallyManaged": true
-            },
-            "Microsoft.OpenApi": {
-              "target": "Package",
-              "version": "[2.7.5, )",
-              "versionCentrallyManaged": true
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[10.2.3, )",
-              "versionCentrallyManaged": true
+              "version": "[3.1.4, )"
             }
-          },
-          "centralPackageVersions": {
-            "AutoMapper": "16.2.0",
-            "BCrypt.Net-Next": "4.2.0",
-            "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.12",
-            "Microsoft.EntityFrameworkCore.SqlServer": "10.0.12",
-            "Microsoft.EntityFrameworkCore.Tools": "10.0.12",
-            "Microsoft.OpenApi": "2.7.5",
-            "Swashbuckle.AspNetCore": "10.2.3"
           },
           "imports": [
             "net461",
@@ -123,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -541,15 +514,17 @@
         }
       }
     },
-    "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi.Tests\\UserManagementApi.Tests.csproj": {
+    "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\UserManagementApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi.Tests\\UserManagementApi.Tests.csproj",
-        "projectName": "UserManagementApi.Tests",
-        "projectPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi.Tests\\UserManagementApi.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\UserManagementApi.csproj",
+        "projectName": "UserManagementApi",
+        "projectPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\UserManagementApi.csproj",
         "packagesPath": "C:\\Users\\hussi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\UserManagementApi.Tests\\obj\\",
+        "outputPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "CentralPackageTransitivePinningEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -569,14 +544,13 @@
           "net10.0": {
             "framework": "net10.0",
             "targetAlias": "net10.0",
-            "projectReferences": {
-              "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\UserManagementApi.csproj": {
-                "projectPath": "C:\\Users\\hussi\\OneDrive\\Desktop\\AZM_FullStack\\MoviePlatform\\backendLayer\\UserManagementApi.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
+          "noWarn": [
+            "NU1507"
+          ],
           "warnAsError": [
             "NU1605"
           ]
@@ -593,26 +567,52 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.InMemory": {
+            "AutoMapper": {
               "target": "Package",
-              "version": "[10.0.12, )"
+              "version": "[16.2.0, )",
+              "versionCentrallyManaged": true
             },
-            "Microsoft.NET.Test.Sdk": {
+            "BCrypt.Net-Next": {
               "target": "Package",
-              "version": "[17.14.1, )"
+              "version": "[4.2.0, )",
+              "versionCentrallyManaged": true
             },
-            "coverlet.collector": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[10.0.12, )",
+              "versionCentrallyManaged": true
             },
-            "xunit": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[2.9.3, )"
+              "version": "[10.0.12, )",
+              "versionCentrallyManaged": true
             },
-            "xunit.runner.visualstudio": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[10.0.12, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[2.7.5, )",
+              "versionCentrallyManaged": true
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[10.2.3, )",
+              "versionCentrallyManaged": true
             }
+          },
+          "centralPackageVersions": {
+            "AutoMapper": "16.2.0",
+            "BCrypt.Net-Next": "4.2.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.12",
+            "Microsoft.EntityFrameworkCore.SqlServer": "10.0.12",
+            "Microsoft.EntityFrameworkCore.Tools": "10.0.12",
+            "Microsoft.OpenApi": "2.7.5",
+            "Swashbuckle.AspNetCore": "10.2.3"
           },
           "imports": [
             "net461",
@@ -633,7 +633,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
