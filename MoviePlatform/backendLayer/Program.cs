@@ -18,7 +18,7 @@ builder.Services.AddEndpointsApiExplorer();
 // ── Swagger with JWT ──
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Movie Platform API", Version = "v3" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Movie Platform API", Version = "v4" });
 
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
