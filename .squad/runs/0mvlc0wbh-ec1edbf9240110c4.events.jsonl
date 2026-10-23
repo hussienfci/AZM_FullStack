@@ -1,0 +1,772 @@
+{"kind":"started","runId":"0mvlc0wbh-ec1edbf9240110c4","provider":"anthropic","model":"claude-opus-5-5","cacheEnabled":true,"plannerRuntime":"agent-sdk"}
+{"kind":"runtime_info","runId":"0mvlc0wbh-ec1edbf9240110c4","provider":"anthropic","model":"claude-opus-5-5","runtimeKind":"agent-sdk","cacheEnabled":true,"scoutEnabled":true,"validationEnabled":true,"budgetCaps":{"maxFileReads":25,"maxContextBytes":50000,"maxDurationSeconds":180},"providerOptions":{"anthropic":{"thinking":"adaptive","effort":"medium","effortByPhase":{"scout":"minimal","draft":"medium"}}}}
+{"kind":"auth_info","runId":"0mvlc0wbh-ec1edbf9240110c4","mode":"subscription","reason":"explicit-config","credentialHint":"Claude login (~/.claude/.credentials.json)"}
+{"kind":"stage_started","runId":"0mvlc0wbh-ec1edbf9240110c4","stage":"scout"}
+{"kind":"usage","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"usage":{"inputTokens":9,"outputTokens":5,"cacheCreationTokens":15393,"cacheReadTokens":0}}
+{"kind":"thinking_block_started","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":0,"blockIndex":0,"delta":""}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"Looking at this"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" intake for"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" establishing"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" the"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" design foundation and integration contracts for"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" Browse"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" Movies, I need"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" to help"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" the drafter understand:"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"\n\n1. **Current architecture"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"** —"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" routing"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":", configuration, and"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" component"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" patterns\n2. **"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"Existing data models** — current"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" movie/"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"genre structures"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" to"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" inform"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" the"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" catalog contract"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"\n3. **"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"Styling approach** — how design"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" tokens and styling"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" are currently managed"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"\n4. **Service"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" patterns** — how the frontend"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" communicates with the backend"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"\n5. **Backend"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" contracts"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"** — existing"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" API structure"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" to inform the adapter"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" interface"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"\n6. **Related"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" work** — existing plans"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" and stories in"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" this"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" domain"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"\n\nThe"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" drafter should examine"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":":"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"\n- Frontend"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" app"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" setup"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":","}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" routing, and configuration ("}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"to"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" understand"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" how"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" to introduce"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" design tokens and"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" br"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"anding config"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":")\n- Browse"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" component ("}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"current state)"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"\n- Movie"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" models"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" and services"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" (to understand existing"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" data flows"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":")\n- Global"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" styles ("}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"to understand the"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" current"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" styling system"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":")\n- Backend movies"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" controller"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" and DT"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"Os (to define"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" the catalog adapter"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" contract)\n-"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" Existing plans ("}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":"to align"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" with prior"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":" decisions"}
+{"kind":"assistant_text","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"delta":")"}
+{"kind":"usage","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":4,"usage":{"inputTokens":0,"outputTokens":6738}}
+{"kind":"usage","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":4,"usage":{"inputTokens":8,"outputTokens":1,"cacheCreationTokens":6747,"cacheReadTokens":15393}}
+{"kind":"thinking_block_started","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"thinking_delta","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":3,"blockIndex":0,"delta":""}
+{"kind":"usage","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":6,"usage":{"inputTokens":0,"outputTokens":988}}
+{"kind":"stage_complete","runId":"0mvlc0wbh-ec1edbf9240110c4","stage":"scout","success":false,"durationMs":61865,"errorMessage":"Claude Code returned an error result: Reached maximum number of turns (2)"}
+{"kind":"stage_started","runId":"0mvlc0wbh-ec1edbf9240110c4","stage":"draft"}
+{"kind":"turn_complete","runId":"0mvlc0wbh-ec1edbf9240110c4","turn":1,"stopReason":"tool_use_or_text"}

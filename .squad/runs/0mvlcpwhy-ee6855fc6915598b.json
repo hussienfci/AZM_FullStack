@@ -1,0 +1,56 @@
+{
+  "runId": "0mvlcpwhy-ee6855fc6915598b",
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "feature": "browse-movies",
+  "storyId": "establish-design-foundation-and-integration-contracts",
+  "startedAt": "2026-10-23T19:16:56.134Z",
+  "completedAt": "2026-10-23T19:19:21.076Z",
+  "success": true,
+  "partial": false,
+  "planFile": ".squad\\plans\\browse-movies\\05-story-establish-design-foundation-and-integration-contracts.md",
+  "stats": {
+    "turns": 19,
+    "inputTokens": 29,
+    "outputTokens": 15145,
+    "cacheCreationTokens": 45976,
+    "cacheReadTokens": 150932,
+    "cacheHitRatio": 1,
+    "durationMs": 115893
+  },
+  "cacheEnabled": true,
+  "durationMs": 144927,
+  "scout": {
+    "enabled": true,
+    "selectedCount": 12,
+    "tokensUsed": 2758,
+    "durationMs": 28647
+  },
+  "validation": {
+    "enabled": true,
+    "issuesCount": 23,
+    "issuesByKind": {
+      "missing_path": 19,
+      "symbol_not_found": 4
+    },
+    "durationMs": 355
+  },
+  "plannerRuntime": {
+    "kind": "agent-sdk",
+    "provider": "anthropic"
+  },
+  "authMode": "subscription",
+  "providerOptionsSnapshot": {
+    "anthropic": {
+      "draft": {
+        "thinking": "adaptive",
+        "effort": "medium"
+      },
+      "scout": {
+        "thinking": "adaptive",
+        "effort": "minimal"
+      }
+    }
+  },
+  "version": 1
+}
