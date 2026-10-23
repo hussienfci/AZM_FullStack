@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, computed, inject, OnInit, signal } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { API_BASE_URL } from '../../core/config/api.config';
+import { APP_CONFIG, brandMonogram, resolveBrandName } from '../../core/config/app-config';
 import { Movie } from '../../core/models/movie.models';
 import { AuthService } from '../../core/services/auth.service';
 import { MovieService } from '../../core/services/movie.service';
@@ -18,15 +20,38 @@ interface MeResponse {
 @Component({
   selector: 'app-browse',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterLink, RouterLinkActive],
   template: `
     <div class="min-h-dvh bg-surface text-white">
       <header
         class="sticky top-0 z-20 flex items-center justify-between bg-gradient-to-b from-black/90 to-transparent px-6 py-4 sm:px-12"
       >
-        <span class="text-2xl font-black tracking-tight text-brand sm:text-3xl">AZM<span class="text-white">FLIX</span></span>
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-3">
+            @if (logo && !logoFailed()) {
+              <img [src]="logo.src" [alt]="logo.alt" (error)="logoFailed.set(true)" class="h-8 w-auto sm:h-9" />
+            } @else {
+              <span
+                aria-hidden="true"
+                class="flex h-8 w-8 items-center justify-center rounded-md bg-brand text-sm font-black text-white sm:h-9 sm:w-9"
+              >{{ monogram }}</span>
+            }
+            <span class="text-2xl font-black tracking-tight text-brand sm:text-3xl">{{ brandName }}</span>
+          </div>
+          <nav aria-label="Main" class="flex items-center gap-4">
+            @for (item of navItems; track item.route) {
+              <a
+                [routerLink]="item.route"
+                routerLinkActive="text-white"
+                [routerLinkActiveOptions]="{ exact: item.exact ?? false }"
+                class="ds-focus ds-touch inline-flex items-center text-sm text-neutral-300 hover:text-white"
+              >{{ item.label }}</a>
+            }
+          </nav>
+        </div>
         <div class="flex items-center gap-4">
           <span class="hidden text-sm text-neutral-300 sm:inline">{{ auth.displayName() }}</span>
-          <button type="button" (click)="auth.logout()" class="btn-ghost">Sign out</button>
+          <button type="button" (click)="auth.logout()" class="btn-ghost ds-focus">Sign out</button>
         </div>
       </header>
 
@@ -66,7 +91,7 @@ interface MeResponse {
         } @else if (movieService.error(); as error) {
           <div class="flex items-center gap-4 rounded-md bg-black/60 p-4 text-sm ring-1 ring-white/10" role="alert">
             <p class="text-red-400">{{ error }}</p>
-            <button type="button" class="btn-ghost" (click)="movieService.load()">Retry</button>
+            <button type="button" class="btn-ghost ds-focus" (click)="movieService.load()">Retry</button>
           </div>
         } @else if (movieService.movies().length === 0) {
           <p class="text-sm text-neutral-400">No movies available yet.</p>
@@ -113,6 +138,13 @@ export class BrowseComponent implements OnInit {
   private readonly http = inject(HttpClient);
   protected readonly auth = inject(AuthService);
   protected readonly movieService = inject(MovieService);
+  protected readonly config = inject(APP_CONFIG);
+
+  protected readonly brandName = resolveBrandName(this.config.brand);
+  protected readonly monogram = brandMonogram(this.brandName);
+  protected readonly logo = this.config.brand.logo;
+  protected readonly logoFailed = signal(false);
+  protected readonly navItems = this.config.navigation;
 
   protected readonly skeletons = Array.from({ length: 8 }, (_, i) => i);
   private readonly brokenPosters = signal<ReadonlySet<string>>(new Set());
