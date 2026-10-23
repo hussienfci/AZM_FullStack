@@ -4,6 +4,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { signal } from '@angular/core';
 
+import { provideAppConfig } from '../../core/config/app-config';
 import { Movie } from '../../core/models/movie.models';
 import { AuthService } from '../../core/services/auth.service';
 import { MovieService } from '../../core/services/movie.service';
@@ -131,5 +132,73 @@ describe('BrowseComponent poster rendering', () => {
     const imgB: HTMLImageElement | null = fixture.nativeElement.querySelector('article img');
     expect(imgB).not.toBeNull();
     expect(imgB!.getAttribute('src')).toBe(urlB);
+  });
+});
+
+describe('BrowseComponent branding and navigation', () => {
+  let fixture: ComponentFixture<BrowseComponent>;
+  let httpTesting: HttpTestingController;
+
+  function setup(brandName: string | null): void {
+    TestBed.configureTestingModule({
+      imports: [BrowseComponent],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideRouter([]),
+        { provide: AuthService, useValue: AUTH_STUB },
+        provideAppConfig({
+          brand: { name: brandName, logo: null },
+          navigation: [
+            { label: 'Browse', route: '/browse', exact: true },
+            { label: 'Watchlist', route: '/watchlist' },
+          ],
+        }),
+      ],
+    });
+
+    httpTesting = TestBed.inject(HttpTestingController);
+    fixture = TestBed.createComponent(BrowseComponent);
+    fixture.detectChanges();
+
+    httpTesting.expectOne('/api/users/me').flush({
+      userId: '1',
+      email: 'a@b.c',
+      firstName: 'Ann',
+      lastName: 'B',
+      role: 'User',
+    });
+    httpTesting
+      .expectOne((r) => r.url === '/api/movies')
+      .flush({ success: true, message: 'ok', data: [], totalCount: 0 });
+    fixture.detectChanges();
+  }
+
+  afterEach(() => httpTesting.verify());
+
+  it('shows the placeholder brand name and monogram when no brand name is set', () => {
+    setup(null);
+
+    const header: HTMLElement = fixture.nativeElement.querySelector('header');
+    expect(header.textContent).toContain('Movie Platform');
+    const monogram = header.querySelector('[aria-hidden="true"]');
+    expect(monogram?.textContent?.trim()).toBe('MP');
+  });
+
+  it('shows the configured brand name', () => {
+    setup('Acme');
+
+    const header: HTMLElement = fixture.nativeElement.querySelector('header');
+    expect(header.textContent).toContain('Acme');
+    expect(header.textContent).not.toContain('Movie Platform');
+    expect(header.querySelector('[aria-hidden="true"]')?.textContent?.trim()).toBe('A');
+  });
+
+  it('renders the configured navigation items', () => {
+    setup('Acme');
+
+    const links: HTMLAnchorElement[] = Array.from(fixture.nativeElement.querySelectorAll('header nav a'));
+    expect(links.map((link) => link.textContent?.trim())).toEqual(['Browse', 'Watchlist']);
+    expect(links.map((link) => link.getAttribute('href'))).toEqual(['/browse', '/watchlist']);
   });
 });
