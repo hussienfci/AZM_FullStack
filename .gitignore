@@ -5,8 +5,8 @@
 .claude/.squad/stories/**/attachments/
 .squad/.trash/
 .claude/.squad/.trash/
-bin/
-obj/
+/bin
+/obj
 # End squad-kit block
 
 # Environment secrets

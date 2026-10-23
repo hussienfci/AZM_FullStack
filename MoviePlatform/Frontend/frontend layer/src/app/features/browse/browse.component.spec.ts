@@ -201,4 +201,13 @@ describe('BrowseComponent branding and navigation', () => {
     expect(links.map((link) => link.textContent?.trim())).toEqual(['Browse', 'Watchlist']);
     expect(links.map((link) => link.getAttribute('href'))).toEqual(['/browse', '/watchlist']);
   });
+
+  it('has no raw hex colours in rendered class or style attributes', () => {
+    setup('Acme');
+
+    const html: string = fixture.nativeElement.innerHTML;
+    const attrs = [...html.matchAll(/\b(?:class|style)="([^"]*)"/g)].map((m) => m[1]);
+    expect(attrs.length).toBeGreaterThan(0);
+    expect(attrs.some((value) => /#[0-9a-f]{3,8}\b/i.test(value))).toBe(false);
+  });
 });

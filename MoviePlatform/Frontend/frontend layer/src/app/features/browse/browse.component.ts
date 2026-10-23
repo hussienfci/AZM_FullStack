@@ -22,7 +22,7 @@ interface MeResponse {
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, RouterLinkActive],
   template: `
-    <div class="min-h-dvh bg-surface text-white">
+    <div class="min-h-dvh bg-surface font-system text-white">
       <header
         class="sticky top-0 z-20 flex items-center justify-between bg-gradient-to-b from-black/90 to-transparent px-6 py-4 sm:px-12"
       >
@@ -58,7 +58,7 @@ interface MeResponse {
       <section class="relative flex min-h-[55vh] items-end overflow-hidden px-6 pb-14 sm:px-12">
         <div class="poster-wall absolute inset-0 opacity-50" aria-hidden="true"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent" aria-hidden="true"></div>
-        <div class="animate-fade-in relative max-w-xl">
+        <div class="relative max-w-xl">
           <h1 class="text-4xl font-black sm:text-5xl">Welcome back{{ firstName() ? ', ' + firstName() : '' }}.</h1>
           <p class="mt-3 text-neutral-300">You're signed in. Your session is protected by a JWT sent on every API call.</p>
 
