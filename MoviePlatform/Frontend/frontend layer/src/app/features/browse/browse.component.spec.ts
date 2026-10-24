@@ -211,3 +211,60 @@ describe('BrowseComponent branding and navigation', () => {
     expect(attrs.some((value) => /#[0-9a-f]{3,8}\b/i.test(value))).toBe(false);
   });
 });
+
+describe('BrowseComponent theme and movie cards', () => {
+  let fixture: ComponentFixture<BrowseComponent>;
+  let httpTesting: HttpTestingController;
+
+  function setup(movies: Movie[]): void {
+    TestBed.configureTestingModule({
+      imports: [BrowseComponent],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideRouter([]),
+        { provide: AuthService, useValue: AUTH_STUB },
+      ],
+    });
+    httpTesting = TestBed.inject(HttpTestingController);
+    fixture = TestBed.createComponent(BrowseComponent);
+    fixture.detectChanges();
+    httpTesting.expectOne('/api/users/me').flush({ userId: '1', email: 'a@b.c', firstName: 'Ann', lastName: 'B', role: 'User' });
+    httpTesting
+      .expectOne((r) => r.url === '/api/movies')
+      .flush({ success: true, message: 'ok', data: movies, totalCount: movies.length });
+    fixture.detectChanges();
+  }
+
+  afterEach(() => httpTesting.verify());
+
+  it('scopes the browse theme on the host element', () => {
+    setup([]);
+    expect(fixture.nativeElement.getAttribute('data-theme')).toBe('browse');
+  });
+
+  it('shows rating value, scale and source', () => {
+    setup([{ ...BASE_MOVIE, rating: 6.5, releaseDate: '2020-05-01T00:00:00' }]);
+
+    const meta: HTMLElement = fixture.nativeElement.querySelector('article p');
+    expect(meta.textContent).toMatch(/2020/);
+    expect(meta.textContent).toMatch(/6\.5\/10 · Platform rating/);
+    expect(meta.querySelector('[aria-label]')?.getAttribute('aria-label')).toBe('Rated 6.5 out of 10 by Platform rating');
+  });
+
+  it('renders labelled placeholders for a missing poster, year and rating', () => {
+    setup([{ ...BASE_MOVIE, posterUrl: null, releaseDate: null, rating: null }]);
+
+    const card: HTMLElement = fixture.nativeElement.querySelector('article');
+    expect(card.querySelector('[role="img"]')?.getAttribute('aria-label')).toBe('No poster available for Test Movie');
+    expect(card.textContent).toContain('No poster');
+    expect(card.textContent).toContain('Year unknown');
+    expect(card.textContent).toContain('Not rated');
+  });
+
+  it('keeps the legacy red brand classes off the page', () => {
+    setup([BASE_MOVIE]);
+    const html: string = fixture.nativeElement.innerHTML;
+    expect(html).not.toMatch(/\b(?:bg|text)-brand\b|btn-ghost|poster-wall/);
+  });
+});

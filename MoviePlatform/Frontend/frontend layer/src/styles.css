@@ -105,6 +105,16 @@
     transition-duration: var(--ds-motion-base);
     transition-timing-function: ease-out;
   }
+  .ds-btn-primary {
+    @apply inline-flex items-center justify-center rounded-ds-control bg-ds-accent px-4 text-ds-meta font-semibold text-ds-on-accent transition-colors hover:brightness-110;
+    min-width: var(--ds-touch-min);
+    min-height: var(--ds-touch-min);
+    transition-duration: var(--ds-motion-base);
+  }
+  .ds-btn-primary:focus-visible {
+    outline: var(--ds-focus-width) solid var(--color-ds-focus);
+    outline-offset: var(--ds-focus-offset);
+  }
   .ds-chip {
     @apply inline-flex items-center rounded-ds-chip border border-ds-control-border px-3 text-ds-meta;
     min-width: var(--ds-touch-min);

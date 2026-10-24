@@ -2,11 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, computed, inject, OnInit, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
+import { formatRating } from '../../core/catalog/catalog-display';
 import { API_BASE_URL } from '../../core/config/api.config';
 import { APP_CONFIG, brandMonogram, resolveBrandName } from '../../core/config/app-config';
 import { Movie } from '../../core/models/movie.models';
 import { AuthService } from '../../core/services/auth.service';
 import { MovieService } from '../../core/services/movie.service';
+
+/** The movies API returns a bare 0-10 rating with no provider, so cards label it with the platform as the source. */
+const RATING_SCALE = 10;
+const RATING_SOURCE = 'Platform rating';
 
 interface MeResponse {
   userId: string;
@@ -21,10 +26,11 @@ interface MeResponse {
   selector: 'app-browse',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, RouterLinkActive],
+  host: { 'data-theme': 'browse' },
   template: `
-    <div class="min-h-dvh bg-surface font-system text-white">
+    <div class="ds-scope min-h-dvh">
       <header
-        class="sticky top-0 z-20 flex items-center justify-between bg-gradient-to-b from-black/90 to-transparent px-6 py-4 sm:px-12"
+        class="sticky top-0 z-20 flex items-center justify-between border-b border-ds-border bg-ds-bg/95 px-6 py-4 sm:px-12"
       >
         <div class="flex items-center gap-8">
           <div class="flex items-center gap-3">
@@ -33,97 +39,100 @@ interface MeResponse {
             } @else {
               <span
                 aria-hidden="true"
-                class="flex h-8 w-8 items-center justify-center rounded-md bg-brand text-sm font-black text-white sm:h-9 sm:w-9"
+                class="flex h-8 w-8 items-center justify-center rounded-ds-control bg-ds-accent text-ds-meta font-black text-ds-on-accent sm:h-9 sm:w-9"
               >{{ monogram }}</span>
             }
-            <span class="text-2xl font-black tracking-tight text-brand sm:text-3xl">{{ brandName }}</span>
+            <span class="text-ds-card-title font-black tracking-tight text-ds-accent">{{ brandName }}</span>
           </div>
           <nav aria-label="Main" class="flex items-center gap-4">
             @for (item of navItems; track item.route) {
               <a
                 [routerLink]="item.route"
-                routerLinkActive="text-white"
+                routerLinkActive="text-ds-text"
                 [routerLinkActiveOptions]="{ exact: item.exact ?? false }"
-                class="ds-focus ds-touch inline-flex items-center text-sm text-neutral-300 hover:text-white"
+                class="ds-focus ds-touch ds-transition inline-flex items-center text-ds-meta text-ds-text-muted transition-colors hover:text-ds-text"
               >{{ item.label }}</a>
             }
           </nav>
         </div>
         <div class="flex items-center gap-4">
-          <span class="hidden text-sm text-neutral-300 sm:inline">{{ auth.displayName() }}</span>
-          <button type="button" (click)="auth.logout()" class="btn-ghost ds-focus">Sign out</button>
+          <span class="hidden text-ds-meta text-ds-text-muted sm:inline">{{ auth.displayName() }}</span>
+          <button type="button" (click)="auth.logout()" class="ds-btn-primary">Sign out</button>
         </div>
       </header>
 
-      <section class="relative flex min-h-[55vh] items-end overflow-hidden px-6 pb-14 sm:px-12">
-        <div class="poster-wall absolute inset-0 opacity-50" aria-hidden="true"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent" aria-hidden="true"></div>
+      <section
+        class="relative flex min-h-[55vh] items-end overflow-hidden bg-gradient-to-b from-ds-elevated via-ds-surface to-ds-bg px-6 pb-12 sm:px-12"
+      >
         <div class="relative max-w-xl">
-          <h1 class="text-4xl font-black sm:text-5xl">Welcome back{{ firstName() ? ', ' + firstName() : '' }}.</h1>
-          <p class="mt-3 text-neutral-300">You're signed in. Your session is protected by a JWT sent on every API call.</p>
+          <h1 class="text-ds-heading font-black">Welcome back{{ firstName() ? ', ' + firstName() : '' }}.</h1>
+          <p class="mt-3 text-ds-text-muted">You're signed in. Your session is protected by a JWT sent on every API call.</p>
 
-          <div class="mt-6 rounded-md bg-black/60 p-4 text-sm ring-1 ring-white/10">
+          <div class="mt-6 rounded-ds-card border border-ds-border bg-ds-surface p-4 text-ds-meta">
             @if (profile(); as me) {
-              <p class="font-semibold text-emerald-400">GET /api/users/me → 200 OK</p>
-              <p class="mt-1 text-neutral-300">{{ me.email }} · role: {{ me.role }} · id: {{ me.userId }}</p>
+              <p class="font-semibold text-ds-accent">GET /api/users/me → 200 OK</p>
+              <p class="mt-1 text-ds-text-muted">{{ me.email }} · role: {{ me.role }} · id: {{ me.userId }}</p>
             } @else if (profileError()) {
-              <p class="font-semibold text-red-400">{{ profileError() }}</p>
+              <p class="font-semibold text-ds-error">{{ profileError() }}</p>
             } @else {
-              <p class="text-neutral-400">Loading your profile…</p>
+              <p class="text-ds-text-muted">Loading your profile…</p>
             }
           </div>
         </div>
       </section>
 
-      <section class="px-6 pb-10 sm:px-12" aria-labelledby="latest-heading">
-        <h2 id="latest-heading" class="mb-3 text-lg font-semibold">Latest Movies</h2>
+      <section class="px-6 pb-12 pt-8 sm:px-12" aria-labelledby="latest-heading">
+        <h2 id="latest-heading" class="mb-4 text-ds-heading font-semibold">Latest Movies</h2>
 
         @if (movieService.loading()) {
-          <div class="flex gap-3 overflow-x-auto pb-2" aria-busy="true" aria-label="Loading movies">
+          <div class="flex gap-3 overflow-x-auto p-1" aria-busy="true" aria-label="Loading movies">
             @for (i of skeletons; track i) {
               <div class="w-40 shrink-0 sm:w-44">
-                <div class="aspect-[2/3] animate-pulse rounded-md bg-neutral-800"></div>
-                <div class="mt-2 h-4 w-3/4 animate-pulse rounded bg-neutral-800"></div>
-                <div class="mt-1 h-3 w-1/2 animate-pulse rounded bg-neutral-800"></div>
+                <div class="aspect-[2/3] animate-pulse rounded-ds-card bg-ds-elevated"></div>
+                <div class="mt-2 h-4 w-3/4 animate-pulse rounded-ds-control bg-ds-elevated"></div>
+                <div class="mt-1 h-3 w-1/2 animate-pulse rounded-ds-control bg-ds-elevated"></div>
               </div>
             }
           </div>
         } @else if (movieService.error(); as error) {
-          <div class="flex items-center gap-4 rounded-md bg-black/60 p-4 text-sm ring-1 ring-white/10" role="alert">
-            <p class="text-red-400">{{ error }}</p>
-            <button type="button" class="btn-ghost ds-focus" (click)="movieService.load()">Retry</button>
+          <div
+            class="flex items-center gap-4 rounded-ds-card border border-ds-control-border bg-ds-surface p-4 text-ds-meta"
+            role="alert"
+          >
+            <p class="text-ds-error">{{ error }}</p>
+            <button type="button" class="ds-btn-primary" (click)="movieService.load()">Retry</button>
           </div>
         } @else if (movieService.movies().length === 0) {
-          <p class="text-sm text-neutral-400">No movies available yet.</p>
+          <p class="text-ds-meta text-ds-text-muted">No movies available yet.</p>
         } @else {
-          <div class="flex gap-3 overflow-x-auto pb-2">
+          <div class="flex gap-3 overflow-x-auto p-1">
             @for (movie of movieService.movies(); track movie.id) {
-              <article class="w-40 shrink-0 transition-transform duration-300 hover:scale-105 sm:w-44">
+              <article class="ds-transition w-40 shrink-0 transition-transform hover:scale-105 sm:w-44">
                 @if (hasPoster(movie)) {
                   <img
                     [src]="movie.posterUrl"
                     [alt]="movie.title + ' poster'"
                     loading="lazy"
                     (error)="onPosterError(movie.posterUrl)"
-                    class="aspect-[2/3] w-full rounded-md bg-neutral-800 object-cover"
+                    class="aspect-[2/3] w-full rounded-ds-card bg-ds-elevated object-cover"
                   />
                 } @else {
                   <div
-                    class="flex aspect-[2/3] w-full items-center justify-center rounded-md bg-neutral-800 p-3 text-center text-sm font-semibold text-neutral-400 ring-1 ring-white/10"
+                    role="img"
+                    [attr.aria-label]="'No poster available for ' + movie.title"
+                    class="flex aspect-[2/3] w-full items-center justify-center rounded-ds-card border border-ds-control-border bg-ds-elevated p-3 text-center text-ds-meta font-semibold text-ds-text-muted"
                   >
-                    {{ movie.title }}
+                    No poster
                   </div>
                 }
-                <h3 class="mt-2 truncate text-sm font-semibold" [title]="movie.title">{{ movie.title }}</h3>
-                <p class="text-xs text-neutral-400">
-                  @if (releaseYear(movie); as year) {
-                    <span>{{ year }}</span>
-                  }
-                  @if (releaseYear(movie) && movie.rating != null) {
-                    <span> · </span>
-                  }
-                  @if (movie.rating != null) {
-                    <span class="text-amber-400">★ {{ movie.rating }}</span>
+                <h3 class="mt-2 line-clamp-2 text-ds-card-title" [title]="movie.title">{{ movie.title }}</h3>
+                <p class="mt-1 flex flex-wrap gap-x-2 text-ds-meta text-ds-text-muted">
+                  <span>{{ releaseYear(movie) ?? 'Year unknown' }}</span>
+                  <span aria-hidden="true">·</span>
+                  @if (ratingFor(movie); as rating) {
+                    <span [attr.aria-label]="rating.ariaLabel">{{ rating.text }} · {{ ratingSource }}</span>
+                  } @else {
+                    <span>Not rated</span>
                   }
                 </p>
               </article>
@@ -146,6 +155,7 @@ export class BrowseComponent implements OnInit {
   protected readonly logoFailed = signal(false);
   protected readonly navItems = this.config.navigation;
 
+  protected readonly ratingSource = RATING_SOURCE;
   protected readonly skeletons = Array.from({ length: 8 }, (_, i) => i);
   private readonly brokenPosters = signal<ReadonlySet<string>>(new Set());
   protected readonly profile = signal<MeResponse | null>(null);
@@ -164,6 +174,12 @@ export class BrowseComponent implements OnInit {
 
   protected releaseYear(movie: Movie): number | null {
     return movie.releaseDate ? new Date(movie.releaseDate).getFullYear() : null;
+  }
+
+  protected ratingFor(movie: Movie): { text: string; ariaLabel: string } | null {
+    return movie.rating == null
+      ? null
+      : formatRating({ value: movie.rating, scale: RATING_SCALE, source: RATING_SOURCE });
   }
 
   protected hasPoster(movie: Movie): boolean {
